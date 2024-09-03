@@ -1,3 +1,4 @@
+// import 'package:Dashboard/main%202.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'weather_data.dart';
@@ -13,6 +14,7 @@ import 'button_exp.dart';
 import 'CPS_lab_hardware.dart';
 import 'about_us.dart';
 import 'sensor.dart';
+import 'school.dart';
 
 void main() {
   runApp(MyApp());
@@ -42,7 +44,8 @@ class MyApp extends StatelessWidget {
         '/Relay_exp': (context) => RelayExp(),
         '/cps_lab_hardware': (context) => CPSLabSetupPage(),
         '/aboutUs': (context) => AboutUsPage(),
-        '/sensors': (context) => Sensorspage()
+        '/sensors': (context) => Sensorspage(),
+        '/school':(context) => MyApps()
       },
     );
   }
@@ -131,6 +134,18 @@ class _MyHomePageState extends State<MyHomePage> {
                           ElevatedButton(
                             onPressed: () {
                               Navigator.pushNamed(context, '/aboutUs');
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Color.fromARGB(255, 247, 216, 178),
+                            ),
+                            child: Text(
+                              'School Module',
+                              style: TextStyle(color: Colors.black),
+                            ),
+                          ),
+                           ElevatedButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '');
                             },
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Color.fromARGB(255, 247, 216, 178),
